@@ -3,10 +3,18 @@ import React, { useCallback, useEffect, useRef } from "react";
 
 const PeerVideoAudioElem = ({ peerIdAtIndex }) => {
   const videoRef = useRef(null);
+  const audioRef = useRef(null);
 
   const peerCamTrack = useHuddleStore(
     useCallback(
       (state) => state.peers[peerIdAtIndex]?.consumers?.cam,
+      [peerIdAtIndex]
+    )
+  )?.track;
+
+  const peerMicTrack = useHuddleStore(
+    useCallback(
+      (state) => state.peers[peerIdAtIndex]?.consumers?.mic,
       [peerIdAtIndex]
     )
   )?.track;
@@ -41,8 +49,23 @@ const PeerVideoAudioElem = ({ peerIdAtIndex }) => {
     };
   }, [peerCamTrack]);
 
+  useEffect(() => {
+    if (peerMicTrack && audioRef.current) {
+      audioRef.current.srcObject = getStream(peerMicTrack);
+    }
+  }, [peerMicTrack]);
+
   return (
-    <video ref={videoRef} muted autoPlay playsInline style={{ width: "50%" }} />
+    <div style={{ width: "50%" }}>
+      <video
+        ref={videoRef}
+        muted
+        autoPlay
+        playsInline
+        style={{ width: "100%" }}
+      />
+      <audio ref={audioRef} autoPlay playsInline controls={false}></audio>
+    </div>
   );
 };
 
