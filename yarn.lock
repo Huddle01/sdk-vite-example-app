@@ -245,17 +245,17 @@
   resolved "https://registry.yarnpkg.com/@esbuild/linux-loong64/-/linux-loong64-0.15.7.tgz#1ec4af4a16c554cbd402cc557ccdd874e3f7be53"
   integrity sha512-IKznSJOsVUuyt7cDzzSZyqBEcZe+7WlBqTVXiF1OXP/4Nm387ToaXZ0fyLwI1iBlI/bzpxVq411QE2/Bt2XWWw==
 
-"@huddle01/huddle01-client@^0.0.7":
-  version "0.0.7"
-  resolved "https://registry.yarnpkg.com/@huddle01/huddle01-client/-/huddle01-client-0.0.7.tgz#3881e14aa6d1d633e412b1ecd858067e526bef5e"
-  integrity sha512-LLVQ8plE0QzrTLSEcxoiWdbGeU7YSHYeFyXTjcIgbZO9i+wlHHKbL/w0jXtoH1Kzphsn+8bg8msTRblYLIvAGQ==
+"@huddle01/huddle01-client@^0.0.10":
+  version "0.0.10"
+  resolved "https://registry.yarnpkg.com/@huddle01/huddle01-client/-/huddle01-client-0.0.10.tgz#a17451d20217a0f05e6f67472800ba27786ac70c"
+  integrity sha512-YVQJOXHmldtr1mQZY133k6RtUhfTmECihNSsF0KecFxwhG2mAevK5aCspSkHIlOs1ta0Rbqrf4rjxTmNV90Xfw==
   dependencies:
     axios "^0.27.2"
-    dayjs "^1.11.4"
     hark "^1.2.3"
     mediasoup-client "^3.6.51"
     protoo-client "^4.0.6"
     random-string "^0.2.0"
+    react "^18.2.0"
     zustand "^4.0.0-rc.1"
 
 "@jridgewell/gen-mapping@^0.1.0":
@@ -453,11 +453,6 @@ d@1, d@^1.0.1:
   dependencies:
     es5-ext "^0.10.50"
     type "^1.0.1"
-
-dayjs@^1.11.4:
-  version "1.11.5"
-  resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.11.5.tgz#00e8cc627f231f9499c19b38af49f56dc0ac5e93"
-  integrity sha512-CAdX5Q3YW3Gclyo5Vpqkgpj8fSdLQcRuzfX6mC6Phy0nfJ0eGYOeS7m4mt2plDWLAtA4TqTakvbboHvUxfe4iA==
 
 debug@^2.2.0:
   version "2.6.9"
